@@ -45,6 +45,14 @@
               <input type="text" id="txtLibelleHF" name="libelle" size="70" maxlength="256" value="" />
             </p>
             <p>
+              <label for="moyenPaiementHF">Moyen de paiement:</label>
+              <select id="moyenPaiementHF" type="text" name="moyenPaiement">
+              <?php foreach ($moyenPaiement as $mp): ?>
+              <option value="<?=$mp["id"] ?>"><?=$mp["libelle"] ?></option>
+              <?php endforeach; ?>
+              </select>
+            </p>
+            <p>
               <label for="txtMontantHF">Montant : </label>
               <input type="text" id="txtMontantHF" name="montant" size="10" maxlength="10" value="" />
             </p>

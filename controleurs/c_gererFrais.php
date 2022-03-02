@@ -46,6 +46,7 @@ switch($action){
 		break;
 	}
 }
+$moyenPaiement = $pdo->getTypeDePaiement();
 $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur,$mois);
 $lesFraisForfait= $pdo->getLesFraisForfait($idVisiteur,$mois);
 include("vues/v_listeFraisForfait.php");

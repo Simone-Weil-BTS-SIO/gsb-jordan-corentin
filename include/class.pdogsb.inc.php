@@ -84,6 +84,21 @@ class PdoGsb{
 		}
 		return $lesLignes; 
 	}
+
+/**
+ * Retourne sous forme d'un tableau associatif tout les moyens de paiements
+
+ * @return tous les moyens de paiements sous la forme d'un tableau associatif 
+*/
+public function getTypeDePaiement() {
+	$req = 'select id as id, libelle as libelle'
+	. ' from MoyenPaiement'
+	. ' order by id asc';
+	$res = PdoGsb::$monPdo->query($req);
+	$lesLignes = $res->fetchAll();
+	return $lesLignes; 
+}
+
 /**
  * Retourne le nombre de justificatif d'un visiteur pour un mois donné
  
